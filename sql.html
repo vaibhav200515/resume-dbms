@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Sidebar and Frame</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background:url(../image/depo-dark.png) no-repeat;
+            background-size:0cqmin;
+            background-position:center;
+            
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 400px;
+            background-color: #f9f1f100;
+            padding: 20px;
+            border-radius: 15px;
+            color: #181818;
+            position: relative;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: #141313;
+            border-radius: 10px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background-color: #13c0ff;
+            border-radius: 10px;
+        }
+
+        .home-button {
+            text-align: right;
+            margin-bottom: 20px; /* Add space below the home button */
+            position: sticky;
+            top: 20px; /* Adjust to desired position */
+        }
+
+        .home-button a {
+            color: #3d3737;
+            background-color: #12c5fc;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .home-button a:hover {
+            background-color: #fb11e7;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+           
+        }
+        
+        
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            color: #1f1e1e;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            margin-left: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: rgb(19, 18, 18);
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Home Button -->
+            <div class="home-button">
+                <a href="../index.html" >Home</a>
+            </div>
+
+            <div>
+
+                <h2 style="color:black;">Database Management</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/create db.html" target="content-frame">SQL Create DB</a></li>
+                    <li><a href="../Commands/sql_commands/drop db.html" target="content-frame">SQL Drop DB</a></li>
+                    <li><a href="../Commands/sql_commands/" target="content-frame">SQL Backup DB</a></li>
+                    <li><a href="../Commands/sql_commands/hosting.html" target="content-frame">SQL Hosting</a></li>
+                </ul>
+                
+                <h2 style="color:black;">Table Management</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/create table.html" target="content-frame">SQL Create Table</a></li>
+                    <li><a href="../Commands/sql_commands/drop table.html" target="content-frame">SQL Drop Table</a></li>
+                    <li><a href="../Commands/sql_commands/alter table.html" target="content-frame">SQL Alter Table</a></li>
+                    <li><a href="../Commands/sql_commands/data types.html" target="content-frame">SQL Data Types</a></li>
+                </ul>
+                
+                <h2 style="color:black;">Constraints</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/constraints.html" target="content-frame">SQL Constraints</a></li>
+                    <li><a href="../Commands/sql_commands/not null.html" target="content-frame">SQL Not Null</a></li>
+                    <li><a href="../Commands/sql_commands/unique.html" target="content-frame">SQL Unique</a></li>
+                    <li><a href="../Commands/sql_commands/primary key.html" target="content-frame">SQL Primary Key</a></li>
+                    <li><a href="../Commands/sql_commands/foreign key.html" target="content-frame">SQL Foreign Key</a></li>
+                    <li><a href="../Commands/sql_commands/check.html" target="content-frame">SQL Check</a></li>
+                    <li><a href="../Commands/sql_commands/default.html" target="content-frame">SQL Default</a></li>
+                </ul>
+                
+                <h2 style="color: black;">Indexes & Auto Increment</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/index.html" target="content-frame">SQL Index</a></li>
+                    <li><a href="../Commands/sql_commands/auto increment.html" target="content-frame">SQL Auto Increment</a></li>
+                </ul>
+                
+                <h2 style="color:black;">Dates & Views</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/dates.html" target="content-frame">SQL Dates</a></li>
+                    <li><a href="../Commands/sql_commands/views.html" target="content-frame">SQL Views</a></li>
+                </ul>
+                
+                <h2 style="color:black;">Security</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/injection.html" target="content-frame">SQL Injection</a></li>
+                </ul>
+                
+                <h2 style="color:black;">Basic Queries</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/select.html" target="content-frame">SQL Select</a></li>
+                    <li><a href="../Commands/sql_commands/select-distinct.html" target="content-frame">SQL Select Distinct</a></li>
+                    <li><a href="../Commands/sql_commands/where.html" target="content-frame">SQL Where</a></li>
+                    <li><a href="../Commands/sql_commands/order by.html" target="content-frame">SQL Order By</a></li>
+                    <li><a href="../Commands/sql_commands/select top.html" target="content-frame">SQL Select Top</a></li>
+                    <li><a href="../Commands/sql_commands/group by.html" target="content-frame">SQL Group By</a></li>
+                    <li><a href="../Commands/sql_commands/having.html" target="content-frame">SQL Having</a></li>
+                    <li><a href="../Commands/sql_commands/exists.html" target="content-frame">SQL Exists</a></li>
+                </ul>
+                
+                <h2 style="color:black;">Aggregate Functions</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/aggregate functions.html" target="content-frame">SQL Aggregate Functions</a></li>
+                    <li><a href="../Commands/sql_commands/min and max.html" target="content-frame">SQL Min and Max</a></li>
+                    <li><a href="../Commands/sql_commands/count.html" target="content-frame">SQL Count</a></li>
+                    <li><a href="../Commands/sql_commands/sum.html" target="content-frame">SQL Sum</a></li>
+                    <li><a href="../Commands/sql_commands/avg.html" target="content-frame">SQL Avg</a></li>
+                </ul>
+                
+                <h2 style="color: black;">Data Modification</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/insert into.html" target="content-frame">SQL Insert Into</a></li>
+                    <li><a href="../Commands/sql_commands/update.html" target="content-frame">SQL Update</a></li>
+                    <li><a href="../Commands/sql_commands/delete.html" target="content-frame">SQL Delete</a></li>
+                    <li><a href="../Commands/sql_commands/select into.html" target="content-frame">SQL Select Into</a></li>
+                    <li><a href="../Commands/sql_commands/insert into select.html" target="content-frame">SQL Insert Into Select</a></li>
+                </ul>
+                
+                <h2 style="color:black;">Operators & Conditions</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/and.html" target="content-frame">SQL And</a></li>
+                    <li><a href="../Commands/sql_commands/or.html" target="content-frame">SQL Or</a></li>
+                    <li><a href="../Commands/sql_commands/not.html" target="content-frame">SQL Not</a></li>
+                    <li><a href="../Commands/sql_commands/like.html" target="content-frame">SQL Like</a></li>
+                    <li><a href="../Commands/sql_commands/wildcards.html" target="content-frame">SQL Wildcards</a></li>
+                    <li><a href="../Commands/sql_commands/in.html" target="content-frame">SQL In</a></li>
+                    <li><a href="../Commands/sql_commands/between.html" target="content-frame">SQL Between</a></li>
+                    <li><a href="../Commands/sql_commands/any,all.html" target="content-frame">SQL Any, All</a></li>
+                    <li><a href="../Commands/sql_commands/operators.html" target="content-frame">SQL Operators</a></li>
+                </ul style="color: aquamarine;">
+                
+                <h2 style="color:black;">Advanced Queries</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/case.html" target="content-frame">SQL Case</a></li>
+                    <li><a href="../Commands/sql_commands/null functions.html" target="content-frame">SQL Null Functions</a></li>
+                    <li><a href="../Commands/sql_commands/null values.html" target="content-frame">SQL Null Values</a></li>
+                    <li><a href="../Commands/sql_commands/aliases.html" target="content-frame">SQL Aliases</a></li>
+                    <li><a href="../Commands/sql_commands/comments.html" target="content-frame">SQL Comments</a></li>
+                </ul>
+                
+                <h2 style="color:black;">Joins</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/join.html" target="content-frame">SQL Joins</a></li>
+                    <li><a href="../Commands/sql_commands/inner join.html" target="content-frame">SQL Inner Join</a></li>
+                    <li><a href="../Commands/sql_commands/left join.html" target="content-frame">SQL Left Join</a></li>
+                    <li><a href="../Commands/sql_commands/right join.html" target="content-frame">SQL Right Join</a></li>
+                    <li><a href="../Commands/sql_commands/full join.html" target="content-frame">SQL Full Join</a></li>
+                    <li><a href="../Commands/sql_commands/Self-Joins.html" target="content-frame">Self Joins</a></li>
+                    <li><a href="../Commands/sql_commands/Equi-Joins.html" target="content-frame">Equi Joins</a></li>
+                    <li><a href="../Commands/sql_commands/Cartesian Joins.html" target="content-frame">Cartesian Joins</a></li>
+                    <li><a href="../Commands/sql_commands/Outer Joins.html" target="content-frame">Outer Joins</a></li>
+                </ul>
+                
+                <h2 style="color:black;">Set Operations</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/union.html" target="content-frame">SQL Union</a></li>
+                    <li><a href="../Commands/sql_commands/Intersect.html" target="content-frame">Intersect</a></li>
+                    <li><a href="../Commands/sql_commands/Minus.html" target="content-frame">Minus</a></li>
+                </ul>
+                
+                <h2 style="color: black;">Stored Procedures & Nested Queries</h2>
+                <ul>
+                    <li><a href="../Commands/sql_commands/stored procedure.html" target="content-frame">SQL Stored Procedures</a></li>
+                    <li><a href="../Commands/sql_commands/Nested Queries.html" target="content-frame">Introduction to Nested Queries</a></li>
+                </ul>
+                
+
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <iframe class="content-frame" name="content-frame" title="Content Frame"></iframe>
+        </div>
+    </div>
+</body>
+</html>
